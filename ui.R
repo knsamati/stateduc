@@ -399,12 +399,15 @@ ui <- function(req) {shinyUI(
                   sidebar = sidebar(
                     selectInput("DRE_map", "Direction Regional de l'Education", choices = unique(df_ecole$DRE)),
                     selectInput("IEPP_map", "Inspection", choices = ""),
+                    p("Il faut tourner le téléphone en mode paysage pour faire apparaitre la carte"),
                     p("Cliquer sur les points pour afficher les indicateurs des établissement")
                   ),
                   card(
+                    full_screen = TRUE,
                     card_header("La repartition des écoles de l'inspection"),
+                    card_body(class = "p-0",
                     leafletOutput("map", width = "100%", height = "100%")
-                  )
+                  ))
                   )
 
       ),

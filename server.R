@@ -61,7 +61,7 @@ df <- reactive({df_ecole})
         Ens_H = sum(Ens_H,na.rm = TRUE),
         Ens_F = sum(Ens_F,na.rm = TRUE),
         Ens = Ens_H + Ens_F
-      )
+      ) 
     
     return(plot_data_dre)
     
@@ -71,15 +71,26 @@ df <- reactive({df_ecole})
     req(ecole())
     ecole() |>
       reactable(
+        defaultColDef = colDef(
+          align = "center",
+          minWidth = 80,
+          headerStyle = list(background = "#C0949F"),
+          footerStyle = list(fontWeight = "bold")
+        ),
         groupBy = "DRE",
         defaultExpanded = TRUE,
+        highlight = TRUE,
+        striped = TRUE,
+        compact = TRUE,
         columnGroups = list(
           colGroup(name = "Salle des Classes", columns = c("Dur", "Banco","Autres","Salle")),
           colGroup(name = "Effectif des Elèves", columns = c("Garcon", "Fille","effectif")),
           colGroup(name = "Effectif des Enseignants", columns = c("Ens_H", "Ens_F","Ens"))
         ),
         columns = list(
+          DRE = colDef(name = "DRE", align = "left", footer = "Total"),
           IEPP = colDef(name = "IEPP",
+                        align = "left",
                         filterable = TRUE),
           Ecole = colDef(name = 'Ecole',aggregate = 'sum',
                          format = colFormat(separators = TRUE),
@@ -89,7 +100,7 @@ df <- reactive({df_ecole})
                          total += row[column.id]})
                          return total }"),
                          footerStyle = htmltools::css(
-                           font_weight = 600,
+                           font_weight = 400,
                            border_top = '2px solid black'
                          )
           ),
@@ -101,7 +112,7 @@ df <- reactive({df_ecole})
                          total += row[column.id]})
                          return total }"),
                        footerStyle = htmltools::css(
-                         font_weight = 600,
+                         font_weight = 400,
                          border_top = '2px solid black'
                        )
           ),
@@ -113,7 +124,7 @@ df <- reactive({df_ecole})
                          total += row[column.id]})
                          return total }"),
                          footerStyle = htmltools::css(
-                           font_weight = 600,
+                           font_weight = 400,
                            border_top = '2px solid black')
           ),
           Autres = colDef(name = 'Autres',aggregate = 'sum',
@@ -124,7 +135,7 @@ df <- reactive({df_ecole})
                          total += row[column.id]})
                          return total }"),
                           footerStyle = htmltools::css(
-                            font_weight = 600,
+                            font_weight = 400,
                             border_top = '2px solid black')
           ),
           Salle = colDef(name = 'Salle',aggregate = 'sum',
@@ -135,7 +146,7 @@ df <- reactive({df_ecole})
                          total += row[column.id]})
                          return total }"),
                          footerStyle = htmltools::css(
-                           font_weight = 600,
+                           font_weight = 400,
                            border_top = '2px solid black')
           ),
           Garcon = colDef(name = 'Garcon',aggregate = 'sum',
@@ -146,7 +157,7 @@ df <- reactive({df_ecole})
                          total += row[column.id]})
                          return total }"),
                           footerStyle = htmltools::css(
-                            font_weight = 600,
+                            font_weight = 400,
                             border_top = '2px solid black')
           ),
           Fille = colDef(name = 'Fille',aggregate = 'sum',
@@ -157,7 +168,7 @@ df <- reactive({df_ecole})
                          total += row[column.id]})
                          return total }"),
                          footerStyle = htmltools::css(
-                           font_weight = 600,
+                           font_weight = 400,
                            border_top = '2px solid black')
           ),
           effectif = colDef(name = 'Effectif',aggregate = 'sum',
@@ -168,7 +179,7 @@ df <- reactive({df_ecole})
                          total += row[column.id]})
                          return total }"),
                             footerStyle = htmltools::css(
-                              font_weight = 600,
+                              font_weight = 400,
                               border_top = '2px solid black')
           ),
           Ens_H = colDef(name = 'Ens_H',aggregate = 'sum',
@@ -178,7 +189,7 @@ df <- reactive({df_ecole})
                          total += row[column.id]})
                          return total }"),
                          footerStyle = htmltools::css(
-                           font_weight = 600,
+                           font_weight = 400,
                            border_top = '2px solid black')
           ),
           Ens_F = colDef(name = 'Ens_F',aggregate = 'sum',
@@ -189,7 +200,7 @@ df <- reactive({df_ecole})
                          total += row[column.id]})
                          return total }"),
                          footerStyle = htmltools::css(
-                           font_weight = 600,
+                           font_weight = 400,
                            border_top = '2px solid black')
           ),
           Ens = colDef(name = 'Ens',aggregate = 'sum',
@@ -200,7 +211,7 @@ df <- reactive({df_ecole})
                          total += row[column.id]})
                          return total }"),
                        footerStyle = htmltools::css(
-                         font_weight = 600,
+                         font_weight = 400,
                          border_top = '2px solid black')
           )
         ),
@@ -216,8 +227,6 @@ df <- reactive({df_ecole})
         ),
         
       )
-    
-    
   })
   
 
@@ -425,7 +434,6 @@ df <- reactive({df_ecole})
     row_id <- as.integer(input$showModal)
     row_data <- annu_iepp()[annu_iepp()$CODE_ETABLISSEMENT == row_id, ]
     modalAnnu(df = row_data)
-
   }) 
   
   
