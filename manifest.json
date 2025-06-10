@@ -3519,36 +3519,6 @@
         "Archs": "x64"
       }
     },
-    "thematic": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "thematic",
-        "Title": "Unified and Automatic 'Theming' of 'ggplot2', 'lattice', and\n'base' R Graphics",
-        "Version": "0.1.6",
-        "Authors@R": "c(\n    person(\"Carson\", \"Sievert\", , \"carson@posit.co\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-9986-114X\")),\n    person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = \"aut\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
-        "Description": "Theme 'ggplot2', 'lattice', and 'base' graphics based on a\n    few choices, including foreground color, background color, accent\n    color, and font family. Fonts that aren't available on the system, but\n    are available via download on 'Google Fonts', can be automatically\n    downloaded, cached, and registered for use with the 'showtext' and\n    'ragg' packages.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://rstudio.github.io/thematic/,\nhttps://github.com/rstudio/thematic",
-        "BugReports": "https://github.com/rstudio/thematic/issues",
-        "Depends": "R (>= 3.0.0)",
-        "Imports": "farver, ggplot2 (>= 3.3.0), graphics, grDevices, grid,\nrappdirs, rlang, rstudioapi (>= 0.8), scales, utils",
-        "Suggests": "bslib, Cairo, curl, gganimate, ggiraph, htmltools, jsonlite,\nknitr, lattice, ragg, rmarkdown, shiny (>= 1.5.0), showtext,\nstats, svglite, sysfonts, systemfonts, testthat, vdiffr (>=\n1.0.0), withr",
-        "Config/Needs/check": "shinytest, callr, sf, ggthemes, patchwork,\ngridExtra, tinytex, devtools, rversions",
-        "Config/Needs/routine": "ggrepel",
-        "Config/Needs/website": "GGally, RColorBrewer, patchwork, apreshill/quillt",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.3.2",
-        "Collate": "'auto.R' 'base.R' 'cache.R' 'gfonts.R' 'ggplot.R' 'globals.R'\n'hooks.R' 'knitr.R' 'lattice.R' 'onLoad.R' 'thematic-package.R'\n'thematic-save-plot.R' 'thematic.R' 'utils.R'\n'view-shinytest.R'",
-        "NeedsCompilation": "no",
-        "Packaged": "2024-07-25 15:50:58 UTC; cpsievert",
-        "Author": "Carson Sievert [aut, cre] (<https://orcid.org/0000-0002-4958-2844>),\n  Barret Schloerke [aut] (<https://orcid.org/0000-0001-9986-114X>),\n  Joe Cheng [aut],\n  Posit Software, PBC [cph, fnd]",
-        "Maintainer": "Carson Sievert <carson@posit.co>",
-        "Repository": "CRAN",
-        "Date/Publication": "2024-07-29 15:50:02 UTC",
-        "Built": "R 4.4.3; ; 2025-06-09 02:24:22 UTC; windows"
-      }
-    },
     "tibble": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -4215,7 +4185,7 @@
       "checksum": "49d415cb683ecc41679215200bb599cf"
     },
     "global.R": {
-      "checksum": "6c039567e7c05abc3a9cdd69727a4e69"
+      "checksum": "690738439393bec4675cd1f8db8bd2a0"
     },
     "indic/indic_ecole.R": {
       "checksum": "75b7ecb3d96096f723b5db8e0e021964"
@@ -4232,14 +4202,20 @@
     "modules/module_ecole.R": {
       "checksum": "e065801676ffd6a76eff35611756ed01"
     },
+    "modules/tables_ecoles.R": {
+      "checksum": "73455ceaa6ead163959076e45f8976e9"
+    },
+    "modules/tables_fun.R": {
+      "checksum": "86c6a4849743bf77beaee46d345580c5"
+    },
     "point.gpkg": {
       "checksum": "a54f343c3356297e9d860ad16c86a708"
     },
     "server.R": {
-      "checksum": "c89e1fbf273ae02a32afd5acd7a5b630"
+      "checksum": "b7a21729748e299e3b2e1b2f542cd21c"
     },
     "ui.R": {
-      "checksum": "0a044df888c2f131a8f1ae9e793fe28d"
+      "checksum": "c94aaa2fadbc2d6cd5f81edf52155c0b"
     },
     "www/script.js": {
       "checksum": "b7a45f1667e61eaa052965db350ee9bb"
