@@ -62,6 +62,8 @@ possible_ecole <- sort(unique(df_ecole$NOM_ETABLISSEMENT))
 
 source("modules/modalEcole.R")
 source("modules/modalAnnu.R")
+source("modules/tables_fun.R")
+source("modules/tables_ecoles.R")
 
 # BOOKMARKING -------------------------------------------------------------
 
