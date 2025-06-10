@@ -3968,28 +3968,25 @@
         "Package": "xfun",
         "Type": "Package",
         "Title": "Supporting Functions for Packages Maintained by 'Yihui Xie'",
-        "Version": "0.52.1",
+        "Version": "0.52",
         "Authors@R": "c(\n  person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\", \"cph\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\", URL = \"https://yihui.org\")),\n  person(\"Wush\", \"Wu\", role = \"ctb\"),\n  person(\"Daijiang\", \"Li\", role = \"ctb\"),\n  person(\"Xianying\", \"Tan\", role = \"ctb\"),\n  person(\"Salim\", \"Brüggemann\", role = \"ctb\", email = \"salim-b@pm.me\", comment = c(ORCID = \"0000-0002-5329-5987\")),\n  person(\"Christophe\", \"Dervieux\", role = \"ctb\"),\n  person()\n  )",
-        "Description": "Miscellaneous functions commonly used in other packages\n        maintained by 'Yihui Xie'.",
+        "Description": "Miscellaneous functions commonly used in other packages maintained by 'Yihui Xie'.",
         "Depends": "R (>= 3.2.0)",
         "Imports": "grDevices, stats, tools",
-        "Suggests": "testit, parallel, codetools, methods, rstudioapi, tinytex (>=\n0.30), mime, litedown (>= 0.6), commonmark, knitr (>= 1.50),\nremotes, pak, curl, xml2, jsonlite, magick, yaml, qs",
+        "Suggests": "testit, parallel, codetools, methods, rstudioapi, tinytex (>=\n0.30), mime, litedown (>= 0.4), commonmark, knitr (>= 1.50),\nremotes, pak, curl, xml2, jsonlite, magick, yaml, qs",
         "License": "MIT + file LICENSE",
         "URL": "https://github.com/yihui/xfun",
         "BugReports": "https://github.com/yihui/xfun/issues",
         "Encoding": "UTF-8",
         "RoxygenNote": "7.3.2",
         "VignetteBuilder": "litedown",
-        "Roxygen": "list(markdown = TRUE)",
-        "Repository": "https://yihui.r-universe.dev",
-        "RemoteUrl": "https://github.com/yihui/xfun",
-        "RemoteRef": "HEAD",
-        "RemoteSha": "5e65f92993c04ad624da2c07e967fe95d2a21008",
         "NeedsCompilation": "yes",
-        "Packaged": "2025-05-05 13:45:21 UTC; root",
-        "Author": "Yihui Xie [aut, cre, cph] (ORCID:\n    <https://orcid.org/0000-0003-0645-5666>, URL: https://yihui.org),\n  Wush Wu [ctb],\n  Daijiang Li [ctb],\n  Xianying Tan [ctb],\n  Salim Brüggemann [ctb] (ORCID: <https://orcid.org/0000-0002-5329-5987>),\n  Christophe Dervieux [ctb]",
+        "Packaged": "2025-04-02 19:53:53 UTC; runner",
+        "Author": "Yihui Xie [aut, cre, cph] (<https://orcid.org/0000-0003-0645-5666>,\n    https://yihui.org),\n  Wush Wu [ctb],\n  Daijiang Li [ctb],\n  Xianying Tan [ctb],\n  Salim Brüggemann [ctb] (<https://orcid.org/0000-0002-5329-5987>),\n  Christophe Dervieux [ctb]",
         "Maintainer": "Yihui Xie <xie@yihui.name>",
-        "Built": "R 4.4.3; x86_64-w64-mingw32; 2025-05-05 13:47:15 UTC; windows",
+        "Repository": "CRAN",
+        "Date/Publication": "2025-04-02 20:40:02 UTC",
+        "Built": "R 4.4.3; x86_64-w64-mingw32; 2025-06-09 00:32:07 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -4077,7 +4074,7 @@
   },
   "files": {
     ".RData": {
-      "checksum": "a2fca6e69e44b9afb32bb52ea8c2db9c"
+      "checksum": "019b9de92a74eabb2b0cb5bf7ea20632"
     },
     "data/CEPD_dre.parquet": {
       "checksum": "f5fb696226601eb400e755a9eccb225f"

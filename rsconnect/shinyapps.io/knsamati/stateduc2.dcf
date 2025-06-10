@@ -1,0 +1,12 @@
+name: stateduc2
+title: stateduc2
+username: knsamati
+account: knsamati
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14915363
+bundleId: 10432725
+url: https://knsamati.shinyapps.io/stateduc2/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
