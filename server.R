@@ -67,7 +67,8 @@ df <- reactive({df_ecole})
     
   }) |> bindCache(input$annee_input)
   
-  output$annutable <- renderReactable({
+
+output$annutable <- renderReactable({
     req(ecole())
     ecole() |>
       reactable(

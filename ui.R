@@ -45,7 +45,7 @@ ui <- function(req) {shinyUI(
                   class = "hero",
                   div(
                     class = "container",
-                    h1("Découvrez notre application Shiny la diffusion des données du SIGE"),
+                    h1("Découvrez notre application Shiny pour la diffusion des données du SIGE"),
                     p("Une solution complète pour analyser les données du SIGE avec une interface intuitive et des fonctionnalités puissantes."),
                     tags$a(href = "#features", class = "cta-button", "En savoir plus"),
                     div(id = "shinyAppContainer", style = "margin-top: 40px;")
@@ -181,7 +181,8 @@ ui <- function(req) {shinyUI(
                nav_panel("National",value = "stat_pays",
                 page_sidebar(
                    sidebar = sidebar(
-                   uiOutput("annee")
+                   uiOutput("annee"),
+                   csvDownloadButton("annutable", filename = "national.csv"),
                   ),
                   card(
                     full_screen = TRUE,
@@ -195,6 +196,7 @@ ui <- function(req) {shinyUI(
                              selectInput("annu_dre", "Direction Regional de l'Education", choices = unique(df_ecole$DRE)),
                              selectInput("annu_iepp", "IEPP", choices = ""),
                              selectInput("an_annu_iepp", "Selectionner l'année scolaire", choices = unique(df_ecole$annee_scolaire)),
+                             csvDownloadButton("annutable_iepp", filename = "inspection.csv"),
                              
                            ),
                            card(

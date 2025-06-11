@@ -67,22 +67,10 @@ source("modules/tables_ecoles.R")
 
 # BOOKMARKING -------------------------------------------------------------
 
-## set bookmarking to be server-based rather than URL-based
-enableBookmarking(store="server")
-
-## Create custom Modal to pop up when a user bookmarks or "Shares"
-showBookmarkUrlModalCustom <- function(url){
-  store <- getShinyOption("bookmarkStore", default = "")
-  if (store == "url") {
-    subtitle <- "This link stores the current state of this application."
-  }
-  else if (store == "server") {
-    subtitle <- "The current state of this application has been stored on the server."
-  }
-  else {
-    subtitle <- NULL
-  }
-  showModal(urlModal(url, title = "Share a link to this table.", subtitle = "Copy this link to share this table."))
-  
+csvDownloadButton <- function(id, filename = "data.csv", label = "exporter en csv") {
+  tags$button(class="btn btn-primary",
+    tagList(icon("download"), label),
+    onclick = sprintf("Reactable.downloadDataCSV('%s', '%s')", id, filename)
+  )
 }
 
