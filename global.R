@@ -68,7 +68,7 @@ source("modules/tables_ecoles.R")
 # BOOKMARKING -------------------------------------------------------------
 
 csvDownloadButton <- function(id, filename = "data.csv", label = "exporter en csv") {
-  tags$button(class="btn btn-primary",
+  tags$button(class = "btn btn-outline-primary",
     tagList(icon("download"), label),
     onclick = sprintf("Reactable.downloadDataCSV('%s', '%s')", id, filename)
   )

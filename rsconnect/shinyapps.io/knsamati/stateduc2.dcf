@@ -5,7 +5,7 @@ account: knsamati
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 14915363
-bundleId: 10433651
+bundleId: 10440820
 url: https://knsamati.shinyapps.io/stateduc2/
 version: 1
 asMultiple: FALSE
